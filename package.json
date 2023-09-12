@@ -8,9 +8,9 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "@pomodoro/tsconfig": "*",
     "eslint": "^8.48.0",
     "prettier": "^3.0.3",
-    "tsconfig": "*",
     "turbo": "latest"
   },
   "name": "pomodoro",
