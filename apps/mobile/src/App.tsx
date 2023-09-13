@@ -1,14 +1,12 @@
 import { StatusBar } from "expo-status-bar";
-import { Alert, Button, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+import { ButtonGroup, Timer } from "@/features/timer";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <Button
-        title="Press me"
-        onPress={() => Alert.alert("Simple Button pressed")}
-      />
+      <Timer />
+      <ButtonGroup />
       <StatusBar style="auto" />
     </View>
   );
@@ -17,7 +15,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#00bfff",
     alignItems: "center",
     justifyContent: "center",
   },
