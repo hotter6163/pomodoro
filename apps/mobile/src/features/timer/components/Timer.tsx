@@ -10,7 +10,6 @@ export const Timer = () => {
 
   useSaveStorage();
   useEffect(() => {
-    console.log("call");
     initialize();
   }, []);
 

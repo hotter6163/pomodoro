@@ -24,7 +24,6 @@ export const useTimerStore = create<TimerStore>((set) => ({
   initialize: async () => {
     const timerData = await storage.get();
     const remainingTime = calcRemainingTime(timerData);
-    console.log("remainingTime", timerData, remainingTime);
 
     if (remainingTime <= 0) {
       set({ data: null, status: "stopped" });
