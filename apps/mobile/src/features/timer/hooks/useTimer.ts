@@ -24,6 +24,9 @@ export const useTime = () => {
           if (timeMs <= 1) resetTimer();
         }, INTERVAL);
         return () => clearInterval(interval);
+      case "paused":
+        setTimeMs(calcRemainingTime(data));
+        return;
     }
   }, [status, data]);
 
