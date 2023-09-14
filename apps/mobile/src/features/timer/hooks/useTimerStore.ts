@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { TimerStorage } from "../storage";
 import { TIMER_CONFIG } from "../config";
-import { calcRemainingTime } from "../utils";
+import { calcRemainingTime } from "../functions/calcRemainingTime";
 import { TimerData } from "../types";
 
 type TimerStatus = "stopped" | "running" | "paused";

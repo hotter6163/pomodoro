@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useTimerStore } from "./useTimerStore";
-import { calcRemainingTime } from "../utils";
+import { calcRemainingTime } from "../functions/calcRemainingTime";
+import { notifyFinishTimer } from "../functions/notifyFinishTimer";
+import { cancelScheduledNotificationAsync } from "expo-notifications";
 
 const INTERVAL = 100;
 
@@ -23,7 +25,13 @@ export const useTime = () => {
           setTimeMs(timeMs);
           if (timeMs <= 1) resetTimer();
         }, INTERVAL);
-        return () => clearInterval(interval);
+        const indicatorPromise = notifyFinishTimer(calcRemainingTime(data));
+        return () => {
+          clearInterval(interval);
+          indicatorPromise.then((indicator) =>
+            cancelScheduledNotificationAsync(indicator)
+          );
+        };
       case "paused":
         setTimeMs(calcRemainingTime(data));
         return;
