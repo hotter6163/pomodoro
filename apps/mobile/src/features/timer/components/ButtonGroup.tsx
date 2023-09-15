@@ -39,11 +39,18 @@ export const ButtonGroup: FC = () => {
           case "paused":
             return (
               <>
-                <Button style={styles.baseButton} onPress={restartTimer}>
-                  <Text style={[styles.baseButtonText]}>RESTART</Text>
+                <Button
+                  style={[styles.baseButton, styles.startButton]}
+                  onPress={restartTimer}
+                >
+                  <Text style={[styles.baseButtonText, styles.startButtonText]}>
+                    RESTART
+                  </Text>
                 </Button>
-                <Button style={styles.baseButton} onPress={resetTimer}>
-                  <Text style={[styles.baseButtonText]}>RESET</Text>
+                <Button style={[styles.baseButton]} onPress={resetTimer}>
+                  <Text style={[styles.baseButtonText, styles.resetButtonText]}>
+                    RESET
+                  </Text>
                 </Button>
               </>
             );
@@ -85,5 +92,8 @@ const styles = StyleSheet.create({
   },
   startButtonText: {
     color: "#fff",
+  },
+  resetButtonText: {
+    fontWeight: "300",
   },
 });

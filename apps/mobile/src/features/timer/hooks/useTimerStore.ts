@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { TimerStorage } from "../storage";
 import { TIMER_CONFIG } from "../config";
-import { calcRemainingTime } from "../utils";
+import { calcRemainingTime } from "../functions/calcRemainingTime";
 import { TimerData } from "../types";
 
 type TimerStatus = "stopped" | "running" | "paused";
@@ -16,20 +16,21 @@ type TimerStore = {
   resetTimer: () => void;
 };
 
-const storage = new TimerStorage();
-
 export const useTimerStore = create<TimerStore>((set) => ({
   data: null,
   status: "stopped",
   initialize: async () => {
-    const timerData = await storage.get();
-    const remainingTime = calcRemainingTime(timerData);
+    const timerData: TimerData | null = await new TimerStorage().get();
 
-    if (remainingTime <= 0) {
+    if (!timerData) {
       set({ data: null, status: "stopped" });
-    } else {
-      set({ data: timerData, status: "running" });
+      return;
     }
+    const inBreak = timerData.breaks.some((b) => !b.to);
+    const remainingTime = calcRemainingTime(timerData);
+    if (remainingTime <= 0) set({ data: null, status: "stopped" });
+    else if (inBreak) set({ data: timerData, status: "paused" });
+    else set({ data: timerData, status: "running" });
   },
   startTimer: () => {
     set({

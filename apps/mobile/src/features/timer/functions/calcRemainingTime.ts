@@ -1,4 +1,4 @@
-import { TimerData } from "./types";
+import { TimerData } from "../types";
 
 export const calcRemainingTime = (timerData: TimerData | null) => {
   if (!timerData) return 0;
