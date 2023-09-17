@@ -7,6 +7,7 @@ const Config: AppJSONConfig = {
     version: "1.0.0",
     orientation: "portrait",
     icon: "./assets/icon.png",
+    scheme: "pomodoro",
     userInterfaceStyle: "light",
     splash: {
       image: "./assets/splash.png",

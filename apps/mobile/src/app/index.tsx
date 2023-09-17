@@ -1,11 +1,10 @@
+import "@/setup";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
 import { ButtonGroup, Timer } from "@/features/timer";
+import { requestNotificationPermissions } from "@/libs/notification";
 
-import "./setup";
-import { requestNotificationPermissions } from "./libs/notification/registerForPushNotificationsAsync";
-
-export default function App() {
+const Home = () => {
   requestNotificationPermissions();
   return (
     <View style={styles.container}>
@@ -14,7 +13,9 @@ export default function App() {
       <StatusBar style="auto" />
     </View>
   );
-}
+};
+
+export default Home;
 
 const styles = StyleSheet.create({
   container: {
