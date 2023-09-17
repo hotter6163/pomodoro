@@ -1,4 +1,3 @@
-import "@/setup";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
 import { ButtonGroup, Timer } from "@/features/timer";
