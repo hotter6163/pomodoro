@@ -2,6 +2,7 @@ import { FC } from "react";
 import { useTimerStore } from "../hooks/useTimerStore";
 import { Button } from "@/components/Button";
 import { StyleSheet, Text, View } from "react-native";
+import { Color, TextColor } from "@/constants/Color";
 
 export const ButtonGroup: FC = () => {
   const { status, startTimer, pauseTimer, restartTimer, resetTimer } =
@@ -84,11 +85,11 @@ const styles = StyleSheet.create({
   },
   baseButtonText: {
     fontSize: 32,
-    color: "#333",
+    color: TextColor.dark,
     textAlign: "center",
   },
   startButton: {
-    backgroundColor: "#ffa500",
+    backgroundColor: Color.primary,
   },
   startButtonText: {
     color: "#fff",
