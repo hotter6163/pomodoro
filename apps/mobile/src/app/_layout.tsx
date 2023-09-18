@@ -1,3 +1,4 @@
+import { useAuthHandler } from "@/hooks/useAuthHandler";
 import { requestNotificationPermissions } from "@/libs/notification";
 import "@/setup";
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
@@ -7,6 +8,7 @@ import { StatusBar } from "expo-status-bar";
 const Layout = () => {
   requestNotificationPermissions();
   GoogleSignin.configure();
+  useAuthHandler();
 
   return (
     <>
@@ -20,6 +22,7 @@ const Layout = () => {
         <Stack.Screen
           name="(auth)/signin"
           options={{
+            headerShown: false,
             presentation: "modal",
           }}
         />
