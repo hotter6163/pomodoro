@@ -5,7 +5,8 @@
     "dev": "turbo run dev",
     "dev:mobile": "cd apps/mobile && yarn start",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "emulator:start": "firebase emulators:start --import .emulators --export-on-exit"
   },
   "devDependencies": {
     "@pomodoro/tsconfig": "*",
