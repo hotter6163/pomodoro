@@ -10,6 +10,7 @@
   "devDependencies": {
     "@pomodoro/tsconfig": "*",
     "eslint": "^8.48.0",
+    "firebase-tools": "^12.5.4",
     "prettier": "^3.0.3",
     "turbo": "latest"
   },
