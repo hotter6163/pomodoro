@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { User as AuthUser } from "@pomodoro/firebase/auth";
+import { User as AuthUser } from "@pomodoro/firebase/client/auth";
 
 type User = {
   id: string;

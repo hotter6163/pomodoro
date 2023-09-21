@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useAuthState } from "./useAuthState";
-import { auth, onAuthStateChanged } from "@pomodoro/firebase/auth";
+import { auth, onAuthStateChanged } from "@pomodoro/firebase/client/auth";
 
 export const useAuthHandler = () => {
   const { setUser } = useAuthState();

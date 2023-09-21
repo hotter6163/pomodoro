@@ -3,7 +3,7 @@ import {
   GoogleAuthProvider,
   auth,
   signInWithCredential,
-} from "@pomodoro/firebase/auth";
+} from "@pomodoro/firebase/client/auth";
 import { useAsyncCallback } from "react-async-hook";
 
 export const useSignIn = () => {

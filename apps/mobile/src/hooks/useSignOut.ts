@@ -1,4 +1,4 @@
-import { auth, signOut as signOutAuth } from "@pomodoro/firebase/auth";
+import { auth, signOut as signOutAuth } from "@pomodoro/firebase/client/auth";
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
 import { useAsyncCallback } from "react-async-hook";
 
