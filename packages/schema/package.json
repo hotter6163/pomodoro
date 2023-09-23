@@ -1,0 +1,13 @@
+{
+  "name": "@pomodoro/schema",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "devDependencies": {
+    "@pomodoro/tsconfig": "*",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "zod": "^3.22.2"
+  }
+}
