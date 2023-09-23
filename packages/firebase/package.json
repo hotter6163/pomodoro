@@ -7,7 +7,8 @@
   "types": "index.ts",
   "dependencies": {
     "firebase": "^10.3.1",
-    "firebase-admin": "^11.10.1"
+    "firebase-admin": "^11.10.1",
+    "zod": "^3.22.2"
   },
   "devDependencies": {
     "@pomodoro/tsconfig": "*",
