@@ -3,6 +3,7 @@ import { useTimerStore } from "../hooks/useTimerStore";
 import { useEffect } from "react";
 import { useSaveStorage } from "../hooks/useSaveStorage";
 import { useTime } from "../hooks/useTimer";
+import { TextColor } from "@/constants/Color";
 
 export const Timer = () => {
   const initialize = useTimerStore((state) => state.initialize);
@@ -35,6 +36,6 @@ const styles = StyleSheet.create({
   },
   timerText: {
     fontSize: 64,
-    color: "#333",
+    color: TextColor.dark,
   },
 });
