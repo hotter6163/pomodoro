@@ -1,4 +1,4 @@
-import { Storage } from "@/libs/store";
+import { Storage } from "@/libs/store/Storage";
 import { TimerData } from "./types";
 
 export class TimerStorage extends Storage<TimerData> {
