@@ -11,6 +11,7 @@
     "@pomodoro/tsconfig": "*",
     "eslint": "^8.48.0",
     "prettier": "^3.0.3",
+    "supabase": "^1.99.5",
     "turbo": "latest"
   },
   "name": "pomodoro",
