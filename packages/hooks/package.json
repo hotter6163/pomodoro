@@ -1,0 +1,17 @@
+{
+  "name": "@pomodoro/hooks",
+  "license": "MIT",
+  "version": "0.0.0",
+  "private": true,
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "dependencies": {
+    "@hookform/resolvers": "^3.3.1",
+    "react-hook-form": "^7.46.2",
+    "zod": "^3.22.2"
+  },
+  "devDependencies": {
+    "@pomodoro/tsconfig": "*",
+    "typescript": "^4.5.2"
+  }
+}
