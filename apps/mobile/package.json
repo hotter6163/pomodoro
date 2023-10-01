@@ -15,6 +15,7 @@
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.19.3",
     "@react-navigation/drawer": "^6.6.3",
+    "@supabase/supabase-js": "^2.37.0",
     "expo": "~49.0.8",
     "expo-background-fetch": "~11.3.0",
     "expo-constants": "~14.4.2",
@@ -32,6 +33,7 @@
     "react-native-safe-area-context": "4.6.3",
     "react-native-screens": "~3.22.0",
     "react-native-svg": "^13.13.0",
+    "react-native-url-polyfill": "^2.0.0",
     "zustand": "^4.4.1"
   },
   "devDependencies": {
